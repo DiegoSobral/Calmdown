@@ -1,35 +1,19 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import 'core/app_export.dart';
+import 'package:navigation_example/tela_1.dart'; // Import Tela 1
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]).then((value) {
-    Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
-    runApp(MyApp());
-  });
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      title: 'App de Navegação',
       theme: ThemeData(
-        visualDensity: VisualDensity.standard,
+        primarySwatch: Colors.purple,
       ),
-      translations: AppLocalization(),
-      locale: Get.deviceLocale, //for setting localization strings
-      fallbackLocale: Locale('en', 'US'),
-      title: 'diego_s_application2',
-      initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.initialRoute,
-      getPages: AppRoutes.pages,
+      home: MyHomePage(),
     );
   }
 }
