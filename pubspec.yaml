@@ -12,6 +12,10 @@ dependencies:
   cached_network_image: ^3.2.1
   flutter_svg: ^1.1.6
   intl: ^0.17.0
+  firebase_auth: ^3.3.15  # Firebase Authentication
+  firebase_core: ^1.13.0  # Firebase Core
+  google_sign_in: ^5.2.0  # Google Sign-In for Flutter
+
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
